@@ -1,8 +1,8 @@
 Saugatghimire::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/about"
-  get "static_pages/portfolio"
-  get "static_pages/contact"
+  root  'static_pages#home'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/portfolio',    to: 'static_pages#portfolio',    via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
