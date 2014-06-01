@@ -1,2 +1,18 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<% provide(:title, 'About Me') %>
+
+<h1 class="title-padding">About me</h1>
+
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <%= image_tag "SaugatGhimire.png", size: "300x400", :alt => "Saugat Ghimire" %>
+  </div>
+  <div class="col-md-9">
+    <br><br><br>
+    <p>
+      Hello, my name is Saugat Ghimire. I am a software engineer, video game developer and web designer. Currently, I am a student at the University of Waterloo studying Computer Science with Business.
+    </p><br>
+    <%= link_to "View Full Resume", resume_path, class: "btn btn-large btn-default" %>
+    <%= link_to "View LinkedIn Profile", 'https://ca.linkedin.com/pub/saugat-ghimire/46/231/1ab/', :target => "_blank", class: "btn btn-large btn-default btn-margin" %>
+  </div>
+</div>
