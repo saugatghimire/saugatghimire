@@ -1,9 +1,15 @@
+<% provide(:title, 'Blogs') %>
 <h1>All Blogs</h1>
 
 <ul id="blogs">
   <% @blogs.each do |blog| %>
     <li>
       <%= link_to blog.title, blog_path(blog) %>
+      <% if blog.created_at > 2.days.ago %>
+        <p>Posted <%= time_ago_in_words(blog.created_at) %> ago</p>
+      <% else %>
+        <p>Posted on <%= blog.created_at.strftime("%d %b %Y") %></p>
+      <% end %>
     </li>
   <% end %>
 </ul>

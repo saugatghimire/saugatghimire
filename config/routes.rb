@@ -5,7 +5,9 @@ Saugatghimire::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/resume',   to: 'static_pages#resume',   via: 'get'
 
-  resources :blogs
+  resources :blogs do
+    resources :comments
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

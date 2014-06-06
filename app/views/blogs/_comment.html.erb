@@ -1,0 +1,11 @@
+<div>
+  <h4>Comment by <%= comment.name %></h4>
+  <small>
+    <% if comment.created_at > 2.days.ago %>
+      Posted <%= time_ago_in_words(comment.created_at) %> ago
+    <% else %>
+      Posted on <%= comment.created_at.strftime("%d %b %Y") %>
+    <% end %>
+  </small>
+  <p><%= comment.body %></p>
+</div>

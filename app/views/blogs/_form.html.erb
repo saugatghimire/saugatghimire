@@ -1,9 +1,14 @@
 <%= form_for(@blog) do |f| %>
-  <ul>
-  <% @blog.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
+  <% if @blog.errors.any? %>
+    <div class="alert alert-danger">
+      The form contains <%= pluralize(@blog.errors.count, "error") %>.
+      <ul>
+      <% @blog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
-  </ul>
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
