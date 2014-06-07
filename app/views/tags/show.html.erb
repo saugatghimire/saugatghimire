@@ -1,0 +1,12 @@
+<% provide(:title, @tag.name) %>
+
+<h1>Blogs Tagged with <%= @tag.name %></h1>
+
+<ul>
+  <% @tag.blogs.each do |blog| %>
+    <li><%= link_to blog.title, blog_path(blog) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "<< See all tags", tags_path %><br>
+<%= link_to "delete", tag_path(@tag), method: :delete, data: {confirm: "Are you sure you want to delete this tag?"} %>

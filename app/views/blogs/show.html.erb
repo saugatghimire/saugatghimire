@@ -10,6 +10,13 @@
 </small>
 <p><%= raw @blog.body %></p>
 
+<p>
+  Tags:
+  <% @blog.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
+
 <%= render partial: 'comments/form' %>
 
 <h3>Comments (<%= @blog.comments.size %>)</h3>
