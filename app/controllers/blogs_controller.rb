@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  before_action :signed_in_user, except: [:index, :show]
+
   include BlogsHelper
 
   def index
@@ -49,4 +51,13 @@ class BlogsController < ApplicationController
 
     redirect_to blogs_path
   end
+
+  private
+
+    def signed_in_user
+      unless signed_in?
+        flash[:warning] = "Please sign in!"
+        redirect_to signin_url
+      end
+    end
 end

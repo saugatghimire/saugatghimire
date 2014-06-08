@@ -22,6 +22,9 @@
 <h3>Comments (<%= @blog.comments.size %>)</h3>
 <%= render partial: 'blogs/comment', collection: @blog.comments %>
 
-<%= link_to "<< Back to Blogs List", blogs_path %><br>
-<%= link_to "edit", edit_blog_path(@blog) %><br>
-<%= link_to "delete", blog_path(@blog), method: :delete, data: {confirm: "Are you sure you want to delete this blog post?"} %>
+<%= link_to "Back to Blogs List", blogs_path %><br>
+
+<% if signed_in? %>
+  <%= link_to "Edit", edit_blog_path(@blog) %><br>
+  <%= link_to "Delete", blog_path(@blog), method: :delete, data: {confirm: "Are you sure you want to delete this blog post?"} %>
+<% end %>

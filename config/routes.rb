@@ -5,10 +5,15 @@ Saugatghimire::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/resume',   to: 'static_pages#resume',   via: 'get'
 
+  match '/signin',  to: 'sessions#new',         via: 'get'
+  match '/signout', to: 'sessions#destroy',     via: 'delete'
+
   resources :blogs do
     resources :comments
   end
   resources :tags
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
