@@ -2,9 +2,9 @@
 
 <h1>Blogs Tagged with <%= @tag.name %></h1>
 
-<ul>
+<ul class="list-unstyled">
   <% @tag.blogs.each do |blog| %>
-    <li><%= link_to blog.title, blog_path(blog) %></li>
+    <%= render 'blogs/preview', :blog => blog %>
   <% end %>
 </ul>
 
