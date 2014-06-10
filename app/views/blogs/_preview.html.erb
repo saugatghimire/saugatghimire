@@ -1,0 +1,12 @@
+<li>
+  <%= link_to blog.title, blog_path(blog), class: "blog-header" %><br>
+  <% if blog.created_at > 2.days.ago %>
+    <small>Posted <%= time_ago_in_words(blog.created_at) %> ago</small>
+  <% else %>
+    <small>Posted on <%= blog.created_at.strftime("%d %b %Y") %></small>
+  <% end %>
+
+  <p>
+    <%= raw blog.body.truncate(500, omission: '... (continued)') %>
+  </p>
+</li>

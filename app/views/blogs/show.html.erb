@@ -19,10 +19,11 @@
 
 <%= render partial: 'comments/form' %>
 
-<h3>Comments (<%= @blog.comments.size %>)</h3>
+<h4>Comments (<%= @blog.comments.size %>)</h4>
 <%= render partial: 'blogs/comment', collection: @blog.comments %>
 
-<%= link_to "Back to Blogs List", blogs_path %><br>
+<br><br>
+<%= link_to "Back to Blogs List", blogs_path, class: "btn btn-large btn-default" %><br>
 
 <% if signed_in? %>
   <%= link_to "Edit", edit_blog_path(@blog) %><br>

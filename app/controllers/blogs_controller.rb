@@ -52,6 +52,11 @@ class BlogsController < ApplicationController
     redirect_to blogs_path
   end
 
+
+  def show_comments_form
+    flash[:success] = "You did it!"
+  end
+
   private
 
     def signed_in_user
