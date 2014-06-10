@@ -59,9 +59,9 @@ h1 {
 }
 
 a {
-  color: $green;
+  color: $maroon;
   &:hover {
-    color: $maroon;
+    color: $green-dark;
     text-decoration: none;
   }
 }
@@ -115,6 +115,16 @@ a {
     cursor: pointer;
     cursor: hand;
     color: $green-dark;
+  }
+}
+
+.blog-tag {
+  font-size: 15px;
+  color: $green-dark;
+  &:hover {
+    cursor: pointer;
+    cursor: hand;
+    color: $maroon-light;
   }
 }
 
