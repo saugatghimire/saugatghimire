@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   include BlogsHelper
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.paginate(page: params[:page], :per_page => 10)
   end
 
   def show

@@ -1,12 +1,14 @@
 <% provide(:title, 'Blogs') %>
 <h1>All Blogs</h1>
 
-<ul class="list-unstyled">
+<ul id="blog-list" class="list-unstyled">
   <% @blogs.each do |blog| %>
     <%= render 'preview', :blog => blog %>
   <% end %>
 </ul>
 
+<%= will_paginate %>
+
 <% if signed_in? %>
-  <%= link_to "Create a New Blog", new_blog_path %>
+  <br><%= link_to "Create a New Blog", new_blog_path %>
 <% end %>

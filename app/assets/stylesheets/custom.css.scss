@@ -9,8 +9,6 @@ $body-bg: $grey;
 $panel-footer-bg: $maroon;
 $panel-primary-text: $grey;
 
-// $text-color: #333;
-
 $navbar-default-link-color: $grey;
 $navbar-default-link-hover-color: $green-dark;
 
@@ -98,16 +96,25 @@ a {
 
 .blog-header {
   font-size: 20px;
-  color: $green-dark;
+  color: $maroon;
+  &:hover {
+    color: $green-dark;
+  }
+}
+
+#blog-list {
+  li {
+    margin-bottom: 15px;
+  }
 }
 
 .custom-link {
   font-size: 16px;
-  color: $green-dark;
+  color: $maroon;
   &:hover {
     cursor: pointer;
     cursor: hand;
-    color: $maroon;
+    color: $green-dark;
   }
 }
 
@@ -133,4 +140,37 @@ form {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+.pagination {
+  li {
+    span, a {
+      background-color: $maroon-light;
+      color: $grey;
+      border-color: $maroon;
+
+      &:hover, &:focus {
+        color: $grey;
+        background-color: $maroon;
+        border-color: $maroon;
+      }
+    }
+  }
+
+  .active {
+    a, a:hover, a:focus, span, span:hover, span:focus {
+      color: $maroon;
+      background-color: $grey;
+      border-color: $maroon;
+    }
+  }
+
+  .disabled {
+    a, a:hover, a:focus, span, span:hover, span:focus {
+      color: $green-dark;
+      background-color: $grey;
+      border-color: $maroon;
+      cursor: default;
+    }
+  }
 }

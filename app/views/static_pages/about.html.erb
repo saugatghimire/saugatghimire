@@ -4,15 +4,22 @@
 
 <br><br>
 <div class="row">
-  <div class="col-md-3">
-    <%= image_tag "SaugatGhimire.png", size: "300x400", :alt => "Saugat Ghimire" %>
-  </div>
-  <div class="col-md-9">
+  <div class="col-md-6">
     <br><br><br>
     <p>
       Hello, my name is Saugat Ghimire. I am a software engineer, video game developer and web designer. Currently, I am a student at the University of Waterloo studying Computer Science with Business.
     </p><br>
     <%= link_to "View Full Resume", resume_path, class: "btn btn-large btn-default" %>
     <%= link_to "View LinkedIn Profile", 'https://ca.linkedin.com/pub/saugat-ghimire/46/231/1ab/', :target => "_blank", class: "btn btn-large btn-default btn-margin" %>
+    <%= link_to "View GitHub Profile", 'https://github.com/saugatghimire', :target => "_blank", class: "btn btn-large btn-default btn-margin" %>
+    <br><br><br>
+
+    <h3 class="title-padding">Contact</h3>
+    <p>If you have any questions or comments, you can send me an email at the following address:</p>
+
+    <%= mail_to "me@saugatghimire.com", 'me@saugatghimire.com', class: "btn btn-large btn-default" %>
+  </div>
+  <div class="col-md-3">
+    <%= image_tag "SaugatGhimire.png", size: "300x400", :alt => "Saugat Ghimire" %>
   </div>
 </div>

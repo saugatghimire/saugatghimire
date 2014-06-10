@@ -2,7 +2,6 @@ Saugatghimire::Application.routes.draw do
   root  'static_pages#home'
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/portfolio',    to: 'static_pages#portfolio',    via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
   match '/resume',   to: 'static_pages#resume',   via: 'get'
 
   match '/signin',  to: 'sessions#new',         via: 'get'
