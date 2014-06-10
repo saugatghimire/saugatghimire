@@ -1,6 +1,6 @@
 <!-- %= link_to "Post a Comment", '#', :onclick => 'document.getElementById(comment-form).style.display = "block"'% -->
 
-<button id="comment-button" class="btn-link">Post a comment</button>
+<div id="comment-button" class="custom-link">Post a comment</div>
 
 <div id="comment-form" class="hidden">
   <%= form_for [ @blog, @comment ] do |f| %>
