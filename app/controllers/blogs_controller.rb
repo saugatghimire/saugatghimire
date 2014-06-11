@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   before_action :signed_in_user, except: [:index, :show]
 
   include BlogsHelper
+  include CommentsHelper
 
   def index
     @blogs = Blog.paginate(page: params[:page], :per_page => 10)

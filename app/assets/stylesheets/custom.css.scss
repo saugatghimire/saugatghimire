@@ -108,6 +108,10 @@ a {
   }
 }
 
+.comment-block {
+  margin-top: 20px;
+}
+
 .custom-link {
   font-size: 16px;
   color: $maroon;
@@ -116,6 +120,20 @@ a {
     cursor: hand;
     color: $green-dark;
   }
+}
+
+.comment-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comment-body {
+  margin-top: 7px;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
 }
 
 /* forms */

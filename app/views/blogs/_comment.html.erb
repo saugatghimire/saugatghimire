@@ -1,5 +1,6 @@
-<div>
-  <h4>Comment by <%= comment.name %></h4>
+<div class="comment-block">
+  <div><%= gravatar_for comment %></div>
+  <div class="comment-name"><%= comment.name %></div>
   <small>
     <% if comment.created_at > 2.days.ago %>
       Posted <%= time_ago_in_words(comment.created_at) %> ago
@@ -7,5 +8,5 @@
       Posted on <%= comment.created_at.strftime("%d %b %Y") %>
     <% end %>
   </small>
-  <p><%= comment.body %></p>
+  <p class="comment-body"><%= comment.body %></p>
 </div>
