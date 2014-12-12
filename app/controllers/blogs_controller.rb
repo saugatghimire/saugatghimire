@@ -2,7 +2,7 @@ class BlogsController < ApplicationController
   before_action :signed_in_user, except: [:index, :show]
 
   include BlogsHelper
-  include CommentsHelper
+  # include CommentsHelper
 
   def index
     @blogs = Blog.paginate(page: params[:page], :per_page => 10)
@@ -10,8 +10,6 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find_by_url(params[:id])
-    @comment = Comment.new
-    @comment.blog_id = @blog.id
   end
 
   def new
@@ -51,11 +49,6 @@ class BlogsController < ApplicationController
     flash[:warning] = "Blog '#{@blog.title}' Deleted!"
 
     redirect_to blogs_path
-  end
-
-
-  def show_comments_form
-    flash[:success] = "You did it!"
   end
 
   private
