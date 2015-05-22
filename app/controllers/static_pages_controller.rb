@@ -11,4 +11,8 @@ class StaticPagesController < ApplicationController
 
   def resume
   end
+
+  def grade_calculator
+    render "static_pages/projects/grade_calculator.html.erb"
+  end
 end

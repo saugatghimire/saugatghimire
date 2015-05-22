@@ -1,5 +1,16 @@
 <% provide(:title, 'Portfolio') %>
 
 <h1 class="title-margin">Portfolio</h1>
-<p>Content coming soon...</p>
-<p>This is where I will be putting up some of my work.</p>
+
+<div class="col-md-4 text-center project-container">
+  <div class="project-content">
+    <%= link_to (image_tag "projects/gradeCalculator.png", size: "300", :alt => "Grade Calculator", class: "img-thumbnail"), grade_calculator_path%>
+    <div class="project-title" ><%= link_to "Grade Calculator", grade_calculator_path%></div>
+  </div>
+</div>
+<div class="col-md-4 text-center project-container">
+  <div class="project-content">
+    <%= link_to (image_tag "projects/earth_defence/beginning.png", size: "300x300", :alt => "Earth Defence", class: "img-thumbnail"), earth_defence_path%>
+    <div class="project-title" ><%= link_to "Earth Defence", earth_defence_path%></div>
+  </div>
+</div>

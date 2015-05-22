@@ -7,6 +7,9 @@ Saugatghimire::Application.routes.draw do
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
 
+  match '/grade_calculator',    to: 'projects#grade_calculator',    via: 'get'
+  match '/earth_defence',    to: 'projects#earth_defence',    via: 'get'
+
   resources :blogs do
     resources :comments
   end

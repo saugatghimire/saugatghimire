@@ -153,6 +153,28 @@ a {
   }
 }
 
+.project-container {
+  height: 340px;
+
+  .project-content {
+    vertical-align: bottom;
+
+    .img-thumbnail {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  .project-title {
+    margin-top: 5px;
+    font-size: 20px;
+    color: $maroon;
+    &:hover {
+      color: $green-dark;
+    }
+  }
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
